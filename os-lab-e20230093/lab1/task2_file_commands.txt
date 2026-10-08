@@ -1,0 +1,13 @@
+/home/gic-phoung-sovannara/oslab-work/lab1/task2_files
+lemon.txt
+maple.txt
+This is file lemon
+This is file maple
+lemon.txt
+lemon_copy.txt
+maple.txt
+lemon.txt
+lemon_copy.txt
+maple_renamed.txt
+lemon.txt
+maple_renamed.txt
