@@ -1,0 +1,21 @@
+# Step 1 - from incoming/ (relative destination)
+mv -- "$file1" ../reports/
+
+# Step 2 - from lab2/ (absolute source and destination)
+mv -- "$OSLAB_WORKSPACE/lab2/incoming/$file2" "$OSLAB_WORKSPACE/lab2/reports/"
+
+# Step 3 - from lab2/ (relative)
+cp -- "reports/$file1" "reports/$file2" "TechCorp/$owner/"
+
+# Step 4 - from lab2/ (relative, copy + rename)
+cp -- "reports/$file1" "TechCorp/$owner/archive/first-original.txt"
+
+# Step 5 - from TechCorp/Marketing/
+cat -- "../$owner/$file1"
+cat -- "$OSLAB_WORKSPACE/lab2/TechCorp/$owner/$file1"
+
+# Step 6 - my decision
+For step 3 I used relative paths, because I was already in the lab folder and they are shorter.
+An absolute path would be better in a script, or when I am not sure which folder I am in, because it works from anywhere.
+Error: cat: 'reports/vendor list.txt': No such file or directory
+Fix: ../../reports/vendor list.txt
