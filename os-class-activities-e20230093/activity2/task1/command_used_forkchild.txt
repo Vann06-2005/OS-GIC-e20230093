@@ -1,0 +1,20 @@
+        printf("Parent: waiting for child (PID: %d) to finish...\n", pid);
+
+        waitpid(pid, &status, 0);
+
+        if (WIFEXITED(status)) {
+            printf("Parent: child exited with status %d\n", WEXITSTATUS(status));
+        }
+        printf("Parent: done.\n");
+    }
+
+    return 0;
+}
+EOF
+
+  624  gcc -o forkchild forkchild.c && ls -l
+  625  clear; gcc -o forkchild forkchild.c && stdbuf -oL ./forkchild > result_forkchild.txt 2>&1; cat result_forkchild.txt
+  626  clear; gcc -o forkchild forkchild.c && cat result_forkchild.txt
+  627  clear
+  628  gcc -o forkchild forkchild.c && cat result_forkchild.txt
+  629  history | tail -n 20 > command_used_forkchild.txt && ls

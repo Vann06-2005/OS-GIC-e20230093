@@ -1,0 +1,20 @@
+    printf("Receiver: message received from queue '%s'\n", QUEUE_NAME);
+    printf("Receiver: message = \"%s\"\n", buffer);
+
+    /* Close and remove the queue */
+    mq_close(mq);
+
+    if (mq_unlink(QUEUE_NAME) == -1) {
+        perror("mq_unlink");
+        exit(EXIT_FAILURE);
+    }
+    printf("Receiver: queue unlinked.\n");
+
+    return 0;
+}
+EOF
+
+  642  gcc -o sender sender.c -lrt && gcc -o receiver receiver.c -lrt && ./receiver
+  643  clear
+  644  gcc -o sender sender.c -lrt && gcc -o receiver receiver.c -lrt && ./sender && ls -l /dev/mqueue/queue-sovannara && ./receiver > result-mq-ipc.txt && cat result-mq-ipc.txt
+  645  history | tail -n 20 > command_used_mq.txt && ls
