@@ -1,0 +1,13 @@
+Server: socket created (fd=3)
+Server: bound to port 9093
+Server: listening... waiting for a client to connect.
+Server: client connected!
+Server: received from client: "Hello from client!"
+Server: sent response: "Hello from server!"
+Server: connection closed.
+Client: socket created
+Client: connecting to server on port 9093...
+Client: connected!
+Client: sent message: "Hello from client!"
+Client: received from server: "Hello from server!"
+Client: connection closed.

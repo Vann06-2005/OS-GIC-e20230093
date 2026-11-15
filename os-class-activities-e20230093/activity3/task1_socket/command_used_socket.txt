@@ -1,0 +1,20 @@
+    int bytes_read = read(sock_fd, buffer, BUFFER_SIZE - 1);
+    if (bytes_read > 0) {
+        buffer[bytes_read] = '\0';
+        printf("Client: received from server: \"%s\"\n", buffer);
+    }
+
+    /* 6. Close socket */
+    close(sock_fd);
+    printf("Client: connection closed.\n");
+
+    return 0;
+}
+EOF
+
+  890  gcc -o server server.c && gcc -o client client.c && ./client
+  891  clear
+  892  ./server
+  893  ./server > result_server.txt 2>&1 &
+  894  sleep 1; ./client > result_client.txt 2>&1; wait; cat result_server.txt result_client.txt > result_socket.txt && cat result_socket.txt
+  895  history | tail -n 20 > command_used_socket.txt && ls
