@@ -1,0 +1,17 @@
+Main thread (TID: 127835111827264): creating 4 threads...
+PID: 2311012 — use this to observe threads with ps or htop
+
+Thread 1 (TID: 127835108800192): starting work...
+Thread 2 (TID: 127835100407488): starting work...
+Thread 3 (TID: 127835092014784): starting work...
+Thread 4 (TID: 127835083622080): starting work...
+Thread 2 (TID: 127835100407488): done.
+Thread 3 (TID: 127835092014784): done.
+Thread 4 (TID: 127835083622080): done.
+Thread 1 (TID: 127835108800192): done.
+
+All threads completed.
+Expected counter value: 400000
+Actual counter value:   118932
+⚠️  Race condition detected! Counter is incorrect.
+This happens because multiple threads modify shared_counter simultaneously.
