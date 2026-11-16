@@ -1,20 +1,30 @@
+    printf("Thread %d: done.\n", id);
+    return NULL;
+}
 
-    printf("\nAll threads completed.\n");
-    printf("Expected counter value: %d\n", NUM_THREADS * 100000);
-    printf("Actual counter value:   %d\n", shared_counter);
+int main() {
+    pthread_t threads[NUM_THREADS];
+    int ids[NUM_THREADS];
+    printf("PID: %d — observe threads now!\n\n", getpid());
 
-    if (shared_counter == NUM_THREADS * 100000) {
-        printf("✅ Counter is correct! Mutex prevented the race condition.\n");
+    for (int i = 0; i < NUM_THREADS; i++) {
+        ids[i] = i + 1;
+        pthread_create(&threads[i], NULL, worker, &ids[i]);
     }
-
-    pthread_mutex_destroy(&counter_mutex);
+    for (int i = 0; i < NUM_THREADS; i++) {
+        pthread_join(threads[i], NULL);
+    }
     return 0;
 }
 EOF
 
-  902  gcc -o threads_mutex threads_mutex.c -pthread && ./threads_mutex > result_threads_mutex.txt 2>&1; cat result_threads_mutex.txt
-  903  clear
-  904  pr -m -t -w 190 result_threads.txt result_threads_mutex.txt
-  905  clear
-  906  paste result_threads.txt result_threads_mutex.txt | expand -t 90
-  907  history | tail -n 20 > command_used_threads.txt
+ 1120  gcc -o threads_observe threads_observe.c -pthread && ./threads_observe & sleep 1; P=$(pgrep -n threads_observe); echo "PID = $P"
+ 1121  clear
+ 1122  ps -L -o pid,lwp,nlwp,psr,stat,comm -p $P; echo; ps -o pid,ppid,psr,comm -p 2; ps --ppid 2 -o pid,ppid,psr,comm | head -8
+ 1123  htop
+ 1124  htop -p $P
+ 1125  ./threads_observe > /dev/null & sleep 1; P=$(pgrep -n threads_observe); echo "PID = $P"
+ 1126  htop -p $P
+ 1127  htop
+ 1128  { ps -eLf | grep [t]hreads_observe; echo; ps -T -p $P; echo "--- /proc/$P/task/ listing ---"; ls /proc/$P/task/; echo; ps -L -o pid,lwp,nlwp,psr,stat,comm -p $P; ps --ppid 2 -o pid,ppid,psr,comm | head -15; } > result_observe_linux.txt; cat result_observe_linux.txt
+ 1129  kill $P; history | tail -n 30 > command_used_threads.txt; cd .. && git add task2_threads/{threads_observe.c,result_observe_linux.txt,command_used_threads.txt} && git commit -m "Activity 3: Task 4 Linux observation" && git push
