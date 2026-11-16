@@ -1,0 +1,16 @@
+Main: creating thread pool with 2 threads for 6 tasks
+
+Task 1 started on thread pool-1-thread-1 (ID: 34)
+Task 2 started on thread pool-1-thread-2 (ID: 35)
+Task 1 completed on thread pool-1-thread-1
+Task 2 completed on thread pool-1-thread-2
+Task 3 started on thread pool-1-thread-1 (ID: 34)
+Task 4 started on thread pool-1-thread-2 (ID: 35)
+Task 3 completed on thread pool-1-thread-1
+Task 4 completed on thread pool-1-thread-2
+Task 6 started on thread pool-1-thread-2 (ID: 35)
+Task 5 started on thread pool-1-thread-1 (ID: 34)
+Task 6 completed on thread pool-1-thread-2
+Task 5 completed on thread pool-1-thread-1
+
+Main: all tasks completed. Pool shut down.

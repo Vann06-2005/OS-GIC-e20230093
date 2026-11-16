@@ -1,0 +1,30 @@
+  134  npm run api
+  135  cd frontend/
+  136  npm run dev
+  137  claude --resume 4420efb7-ba14-4f4a-b421-f47817b0ec16
+  138  copilot --resume=f45c9de9-dd72-4576-b91e-ed5d11c75789
+  139  agy --conversation 56c400db-a154-4626-9e23-276e1431123a
+  140  copilot
+  141  agy
+  142  ssh gic-phoung-sovannara@ssh2.rathpisey.site
+  143  copilot --continue
+  144  ssh gic-phoung-sovannara@ssh2.rathpisey.site
+  145  claude --resume 4420efb7-ba14-4f4a-b421-f47817b0ec16
+  146  copilot --resume=f45c9de9-dd72-4576-b91e-ed5d11c75789
+  147  claude --resume 4420efb7-ba14-4f4a-b421-f47817b0ec16
+  148  agy --conversation 56c400db-a154-4626-9e23-276e1431123a
+  149  claude --resume 4420efb7-ba14-4f4a-b421-f47817b0ec16
+  150  copilot --resume=f45c9de9-dd72-4576-b91e-ed5d11c75789
+  151  claude --resume 4420efb7-ba14-4f4a-b421-f47817b0ec16
+  152  agy --conversation 56c400db-a154-4626-9e23-276e1431123a
+  153  claude --resume 4420efb7-ba14-4f4a-b421-f47817b0ec16
+  154  copilot --resume=f45c9de9-dd72-4576-b91e-ed5d11c75789
+  155  claude --resume 4420efb7-ba14-4f4a-b421-f47817b0ec16
+  156  agy --conversation 56c400db-a154-4626-9e23-276e1431123a
+  157  claude --continue
+  158  claude --resume 4420efb7-ba14-4f4a-b421-f47817b0ec16
+  159  copilot --resume=f45c9de9-dd72-4576-b91e-ed5d11c75789
+  160  ssh gic-phoung-sovannara@ssh2.rathpisey.site
+  161  cd ~/Documents/OS-Activity3/task3_java && clear
+  162  paste result_thread_demo.txt result_runnable_demo.txt result_pool_demo.txt | expand -t 62
+  163  history | tail -n 30 > command_used_java.txt && scp *.java result_*.txt command_used_java.txt gic-phoung-sovannara@ssh2.rathpisey.site:os-gic-e20230093/os-class-activities-e20230093/activity3/task3_java/
