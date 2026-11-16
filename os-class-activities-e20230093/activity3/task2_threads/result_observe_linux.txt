@@ -1,9 +1,30 @@
-gic-pho+ 2400396 2396151 2400396  0    1 21:51 pts/3    00:00:00 grep --color=auto threads_observe
+gic-pho+ 2400579 2400577 2400579  0    5 21:53 pts/3    00:00:00 ./threads_observe
+gic-pho+ 2400579 2400577 2400580  0    5 21:53 pts/3    00:00:00 ./threads_observe
+gic-pho+ 2400579 2400577 2400581  0    5 21:53 pts/3    00:00:00 ./threads_observe
+gic-pho+ 2400579 2400577 2400582  0    5 21:53 pts/3    00:00:00 ./threads_observe
+gic-pho+ 2400579 2400577 2400583  0    5 21:53 pts/3    00:00:00 ./threads_observe
+gic-pho+ 2400776 2396151 2400776  0    1 21:54 pts/3    00:00:00 grep --color=auto threads_observe
 
     PID    SPID TTY          TIME CMD
---- /proc/2398413/task/ listing ---
+2400579 2400579 pts/3    00:00:00 threads_observe
+2400579 2400580 pts/3    00:00:00 threads_observe
+2400579 2400581 pts/3    00:00:00 threads_observe
+2400579 2400582 pts/3    00:00:00 threads_observe
+2400579 2400583 pts/3    00:00:00 threads_observe
+--- /proc/2400579/task/ listing ---
+2400579
+2400580
+2400581
+2400582
+2400583
+count: 5
 
     PID     LWP NLWP PSR STAT COMMAND
+2400579 2400579    5   5 Sl   threads_observe
+2400579 2400580    5   7 Sl   threads_observe
+2400579 2400581    5   0 Sl   threads_observe
+2400579 2400582    5   2 Sl   threads_observe
+2400579 2400583    5   1 Sl   threads_observe
     PID    PPID PSR COMMAND
       3       2   0 pool_workqueue_release
       4       2   0 kworker/R-rcu_gp
@@ -14,7 +35,7 @@ gic-pho+ 2400396 2396151 2400396  0    1 21:51 pts/3    00:00:00 grep --color=au
      10       2   0 kworker/0:0H-kblockd
      13       2   0 kworker/R-mm_percpu_wq
      14       2   0 ksoftirqd/0
-     15       2   0 rcu_preempt
+     15       2   1 rcu_preempt
      16       2   0 rcu_exp_par_gp_kthread_worker/0
      17       2   2 rcu_exp_gp_kthread_worker
      18       2   0 migration/0
