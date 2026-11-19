@@ -1,0 +1,6 @@
+<notes/silver12.txt>
+<notes/silver1.txt>
+<notes/silver2.txt>
+<notes/silver1.txt>
+<notes/silver2.txt>
+<notes/*.txt>

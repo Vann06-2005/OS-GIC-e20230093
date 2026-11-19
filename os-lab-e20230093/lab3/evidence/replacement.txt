@@ -1,0 +1,9 @@
+
+=== NEW FILE USING THE OLD NAME ===
+19142462 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara 12 Nov 12 08:40 silver-final.txt
+19142462 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara 12 Nov 12 08:40 silver-hard.txt
+19146291 lrwxrwxrwx 1 gic-phoung-sovannara gic-phoung-sovannara 10 Nov 19 07:59 silver-soft.txt -> silver.txt
+19146293 -rw-rw-r-- 1 gic-phoung-sovannara gic-phoung-sovannara 12 Nov 19 08:05 silver.txt
+silver.txt: version 284
+hard: version 200
+soft: version 284

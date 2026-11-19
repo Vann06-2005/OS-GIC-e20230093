@@ -1,0 +1,25 @@
+
+=== BEFORE RENAME ===
+19142462 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara 12 Nov 12 08:40 silver-hard.txt
+19146291 lrwxrwxrwx 1 gic-phoung-sovannara gic-phoung-sovannara 10 Nov 19 07:59 silver-soft.txt -> silver.txt
+19142462 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara 12 Nov 12 08:40 silver.txt
+hard: version 200
+soft: version 200
+stored target: silver.txt
+
+=== AFTER RENAME, BEFORE REPAIR ===
+19142462 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara 12 Nov 12 08:40 silver-final.txt
+19142462 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara 12 Nov 12 08:40 silver-hard.txt
+19146291 lrwxrwxrwx 1 gic-phoung-sovannara gic-phoung-sovannara 10 Nov 19 07:59 silver-soft.txt -> silver.txt
+hard: version 200
+stored target: silver.txt
+soft: cat: silver-soft.txt: No such file or directory
+
+=== AFTER REPAIR ===
+19142462 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara 12 Nov 12 08:40 silver-final.txt
+19142462 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara 12 Nov 12 08:40 silver-hard.txt
+19146291 lrwxrwxrwx 1 gic-phoung-sovannara gic-phoung-sovannara 16 Nov 19 08:08 silver-soft.txt -> silver-final.txt
+stored target: silver-final.txt
+hard: version 200
+soft: version 200
+Decision: I stored the relative target silver-final.txt because it is read from the links folder, so the link keeps working if the whole lab3 folder is moved or copied; an absolute path like /home/gic-phoung-sovannara/oslab-work/lab3/links/silver-final.txt would still point to the old location after a move, and the link would be dangling.
