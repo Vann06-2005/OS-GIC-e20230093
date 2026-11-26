@@ -1,0 +1,7 @@
+grep '^ok,' data/events.csv | tee evidence/selected.txt
+grep '^ok,' data/events.csv | cut -d, -f2 | tee evidence/fields.txt
+grep '^ok,' data/events.csv | wc -l > evidence/normal.txt
+grep '^ok,' data/no-match.csv | wc -l > evidence/edge.txt
+grep '^ok,' data/changed.csv | wc -l >> evidence/edge.txt
+cat data/missing.csv > evidence/stdout.txt 2> evidence/stderr.txt
+echo $? > evidence/status.txt
