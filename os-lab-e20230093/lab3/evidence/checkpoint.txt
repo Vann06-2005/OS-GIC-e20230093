@@ -1,0 +1,12 @@
+.:
+total 8
+19544114 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara   24 Nov 26 21:18 candle-old.txt
+19544113 drwxrwxr-x 2 gic-phoung-sovannara gic-phoung-sovannara 4096 Nov 26 21:18 links
+
+links:
+total 4
+19544115 lrwxrwxrwx 1 gic-phoung-sovannara gic-phoung-sovannara 17 Nov 26 21:18 first.txt -> ../candle-old.txt
+19544114 -rw-rw-r-- 2 gic-phoung-sovannara gic-phoung-sovannara 24 Nov 26 21:18 hard.txt
+19544116 lrwxrwxrwx 1 gic-phoung-sovannara gic-phoung-sovannara  9 Nov 26 21:18 second.txt -> first.txt
+checkpoint stone candle
+checkpoint stone candle
